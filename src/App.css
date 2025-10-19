@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.Navbar {
+    background-color: #282c34;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.Narbar-item {
+    margin: 5px 10px;
+}
