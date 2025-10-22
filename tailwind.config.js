@@ -4,7 +4,11 @@ export default {
     theme: {
         extend: {
             colors: {
-                'bgbase': '#282c34'
+                'bgclr-0': 'hsl(0, 0%, 10%)',
+                'bgclr-1': 'hsl(0, 0%, 15%)',
+                'bgclr-2': 'hsl(0, 0%, 20%)',
+                'txtclr-muted': 'hsl(0, 0%, 70%)',
+                'txtclr': 'hsl(0, 0%, 95%)',
             },
         },
     },
