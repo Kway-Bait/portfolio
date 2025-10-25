@@ -5,7 +5,7 @@ const wrapperClassBase = (
 );
 
 const shadowClass = (
-    "absolute w-12 h-12 bg-gray-600 rounded-lg transition-all duration-150 translate-y-1 shadow-lg"
+    "absolute w-12 h-12 bg-gray-600 rounded-lg translate-y-2 shadow-lg"
 );
 
 const colors = [
@@ -19,8 +19,8 @@ const colors = [
 ];
 
 function TextTile(text) {
-    let [tileColor, setTileColor] = useState(0);
-    let [isClicked, setIsClicked] = useState(false);
+    let [tileColor, setTileColor] = useState(Math.floor(Math.random() * colors.length));
+    let [isClicked, setIsClicked] = useState(Math.floor(Math.random() * 2));
 
     const wrapperClass = `
         ${wrapperClassBase} 
