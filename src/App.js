@@ -6,14 +6,19 @@ import Home from './pages/Home.js';
 import About from './pages/About.js';
 import Contact from './pages/Contact.js';
 
+// CSS Class
+const navbar_button = (
+    "mx-3 backdrop-blur-md"
+)
+
 function App() {
     return (
         <div class="bg-bgclr-1 text-center">
             <BrowserRouter>
                 <nav class="flex p-4 pr-5 justify-end text-2xl text-txtclr-muted font-mono font-semibold">
-                    <div class="mx-3"><Link to="/">Home</Link></div>
-                    <div class="mx-3"><Link to="/about">About</Link></div>
-                    <div class="mx-3"><Link to="/contact">Contact</Link></div>
+                    <div class={navbar_button}><Link to="/">Home</Link></div>
+                    <div class={navbar_button}><Link to="/about">About</Link></div>
+                    <div class={navbar_button}><Link to="/contact">Contact</Link></div>
                 </nav>
 
                 <Routes>
