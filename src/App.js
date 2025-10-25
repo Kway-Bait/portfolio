@@ -8,12 +8,12 @@ import Contact from './pages/Contact.js';
 
 // CSS Class
 const navbar_button = (
-    "mx-3 backdrop-blur-md"
+    "mx-3 backdrop-blur-md hover:text-txtclr"
 )
 
 function App() {
     return (
-        <div class="bg-bgclr-1 text-center">
+        <div class="bg-bgclr-0 text-center">
             <BrowserRouter>
                 <nav class="flex p-4 pr-5 justify-end text-2xl text-txtclr-muted font-mono font-semibold">
                     <div class={navbar_button}><Link to="/">Home</Link></div>
