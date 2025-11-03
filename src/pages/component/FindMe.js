@@ -1,10 +1,11 @@
 const contact_button_class = (
-    "mx-2 px-3 bg-bgclr-3 rounded-2xl"
+    "mx-1 px-3 bg-bgclr-2 hover:bg-bgclr-3 rounded-2xl"
 )
 
 function FindMe() {
     const links = [
         ["LinkedIn", "https://linkedin.com/in/kwyong05"],
+        ["Github", "https://github.com/Kway-Bait"],
     ];
 
     return (

@@ -1,6 +1,7 @@
 import TextTile from './component/TextTile.js';
 import Skills from './component/Skills.js';
 import FindMe from './component/FindMe.js';
+import WorkExp from './component/WorkExp.js';
 
 function Home() {
 
@@ -9,8 +10,8 @@ function Home() {
         const lastname = "KEWEI";
         return (
             <div class="inline">
-                {surname.split('').map(c => TextTile(c))}
-                {lastname.split('').map(c => TextTile(c))}
+                {surname.split('').map((c, id) => <span key={id}>{TextTile(c)}</span>)}
+                {lastname.split('').map((c, id) => <span key={id}>{TextTile(c)}</span>)}
             </div>
         );
     }
@@ -29,6 +30,7 @@ function Home() {
             <h2 class="my-2 py-2 text-3xl font-semibold">Software developer | Web, AI & More</h2>
             <FindMe />
             <Skills />
+            <WorkExp />
         </div>
     );
 }
