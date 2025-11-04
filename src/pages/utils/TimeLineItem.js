@@ -12,7 +12,7 @@ const tag_class = (
 
 function TimeLineItem({ data }) {
     return (
-        <div className={time_line_item}>
+        <div className={time_line_item} data-aos="fade-up">
             <div className={time_line_content}>
                 <h1 className="inline mx-1 text-2xl font-bold">{data.title}</h1>
                 <h2 className="inline mx-1 text-xl font-semibold text-txtclr-muted">{data.subtitle}</h2>

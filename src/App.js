@@ -1,6 +1,9 @@
-// import './output.css';
-import './App.css'
+import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+
+import './App.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Home from './pages/Home.js';
 import About from './pages/About.js';
@@ -12,8 +15,14 @@ const navbar_button = (
 )
 
 function App() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+        });
+    }, []);
+
     return (
-        <div className="bg-bgclr-0 text-center">
+        <div className="bg-bgclr-0 min-h-full text-center">
             <BrowserRouter>
                 <nav className="flex p-4 pr-5 justify-end text-2xl text-txtclr-muted font-mono font-semibold">
                     <div className={navbar_button}><Link to="/">Home</Link></div>

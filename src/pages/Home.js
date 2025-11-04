@@ -24,12 +24,16 @@ function Home() {
     // 5. 
 
     return (
-        <div className="m-5 min-h-screen py-9 px-[10%] text-txtclr text-left">
+        <div className="min-h-full py-9 px-[10%] text-txtclr text-left">
             <h1 className="m-2 text-7xl font-bold">Hi!</h1>
             <h1 className="my-2 py-2 text-4xl font-semibold">I'm {NameTiles()}</h1>
             <h2 className="my-2 py-2 text-3xl font-semibold">Software developer | Web, AI & More</h2>
-            {/* <FindMe /> */}
-            {/* <Skills /> */}
+            <FindMe />
+            <Skills />
+            <Skills />
+            <Skills />
+            <Skills />
+            <Skills />
             <WorkExp />
         </div>
     );
