@@ -34,15 +34,15 @@ function TextTile(text) {
     }
 
     return (
-        <div class="inline-flex justify-center items-center">
+        <div className="inline-flex justify-center items-center">
             <div
-                class={wrapperClass}
+                className={wrapperClass}
                 onClick={() => handleTileClicked()}
             >
                 {text}
             </div>
 
-            <div class={shadowClass} />
+            <div className={shadowClass} />
         </div>
     );
 }

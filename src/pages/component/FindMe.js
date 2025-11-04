@@ -9,12 +9,12 @@ function FindMe() {
     ];
 
     return (
-        <div class="m-1 my-4 p-3 rounded-lg border-2 border-indigo-300">
-            <h2 class="inline text-lg font-semibold">Find me at: </h2>
-            <div class="inline-flex flex-wrap justify-start">
+        <div className="m-1 my-4 p-3 rounded-lg border-2 border-indigo-300">
+            <h2 className="inline text-lg font-semibold">Find me at: </h2>
+            <div className="inline-flex flex-wrap justify-start">
                 {links.map(([name, link]) => (
                     <a 
-                        class={contact_button_class} 
+                        className={contact_button_class} 
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"

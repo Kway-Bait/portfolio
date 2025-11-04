@@ -12,16 +12,16 @@ const tag_class = (
 
 function TimeLineItem({ data }) {
     return (
-        <div class={time_line_item}>
-            <div class={time_line_content}>
-                <h1 class="inline mx-1 text-2xl font-bold">{data.title}</h1>
-                <h2 class="inline mx-1 text-xl font-semibold text-txtclr-muted">{data.subtitle}</h2>
-                <p class="m-1 my-2 text-lg text-txtclr-muted">{data.desc}</p>
+        <div className={time_line_item}>
+            <div className={time_line_content}>
+                <h1 className="inline mx-1 text-2xl font-bold">{data.title}</h1>
+                <h2 className="inline mx-1 text-xl font-semibold text-txtclr-muted">{data.subtitle}</h2>
+                <p className="m-1 my-2 text-lg text-txtclr-muted">{data.desc}</p>
                 {data.tags.map((tag, id) => (
                     <div key={id}>
-                        <h3 class="inline mx-1 font-semibold">{tag.title}:</h3>
+                        <h3 className="inline mx-1 font-semibold">{tag.title}:</h3>
                         {tag.content.map((p, id1) => (
-                            <span class={tag_class} key={id1}>{p}</span>
+                            <span className={tag_class} key={id1}>{p}</span>
                         ))}
                     </div>
                 ))}

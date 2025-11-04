@@ -9,7 +9,7 @@ function Home() {
         const surname = "YONG";
         const lastname = "KEWEI";
         return (
-            <div class="inline">
+            <div className="inline">
                 {surname.split('').map((c, id) => <span key={id}>{TextTile(c)}</span>)}
                 {lastname.split('').map((c, id) => <span key={id}>{TextTile(c)}</span>)}
             </div>
@@ -24,12 +24,12 @@ function Home() {
     // 5. 
 
     return (
-        <div class="m-5 min-h-screen py-9 px-[10%] text-txtclr text-left">
-            <h1 class="m-2 text-7xl font-bold">Hi!</h1>
-            <h1 class="my-2 py-2 text-4xl font-semibold">I'm {NameTiles()}</h1>
-            <h2 class="my-2 py-2 text-3xl font-semibold">Software developer | Web, AI & More</h2>
-            <FindMe />
-            <Skills />
+        <div className="m-5 min-h-screen py-9 px-[10%] text-txtclr text-left">
+            <h1 className="m-2 text-7xl font-bold">Hi!</h1>
+            <h1 className="my-2 py-2 text-4xl font-semibold">I'm {NameTiles()}</h1>
+            <h2 className="my-2 py-2 text-3xl font-semibold">Software developer | Web, AI & More</h2>
+            {/* <FindMe /> */}
+            {/* <Skills /> */}
             <WorkExp />
         </div>
     );
