@@ -19,7 +19,7 @@ function Skills() {
     ];
 
     return (
-        <div class="my-4 p-3 w-[50%] max-w-lg bg-bgclr-1 hover:bg-bgclr-2 rounded-xl border-2 border-cyan-300">
+        <div class="m-1 my-4 p-3 w-[50%] max-w-lg bg-bgclr-1 hover:bg-bgclr-2 rounded-xl border-2 border-cyan-300">
             <h1 class="p-1 text-xl font-bold">Skills & Tech-stacks</h1>
             {content.map(([title, lst]) => (
                 <div class="p-1">

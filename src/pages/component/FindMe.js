@@ -9,7 +9,7 @@ function FindMe() {
     ];
 
     return (
-        <div class="my-4 p-3 rounded-lg border-2 border-indigo-300">
+        <div class="m-1 my-4 p-3 rounded-lg border-2 border-indigo-300">
             <h2 class="inline text-lg font-semibold">Find me at: </h2>
             <div class="inline-flex flex-wrap justify-start">
                 {links.map(([name, link]) => (

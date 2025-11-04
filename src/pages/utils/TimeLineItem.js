@@ -1,5 +1,5 @@
 const time_line_item = (
-    "m-2 p-2 rounded-2xl border-2 border-gray-500"
+    "m-1 my-5 p-3 inline-flex rounded-2xl border-2"
 )
 
 const time_line_content = (
@@ -7,7 +7,7 @@ const time_line_content = (
 )
 
 const tag_class = (
-    "mx-1 px-3 bg-bgclr-2 hover:bg-bgclr-3 rounded-2xl"
+    "mx-1 px-3 bg-bgclr-2 hover:bg-bgclr-3 rounded-2xl cursor-default"
 )
 
 function TimeLineItem({ data }) {

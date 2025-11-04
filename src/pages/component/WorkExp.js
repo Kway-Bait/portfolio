@@ -1,4 +1,4 @@
-import TimeLineItem from "../utils/TimeLineItem.js";
+import TimeLine from "../utils/TimeLine.js";
 
 const work_exp = [
     {
@@ -30,7 +30,7 @@ const work_exp = [
 function WorkExp() {
     return (
         <div>
-            {work_exp.map((data, id) => <div key={id}>{TimeLineItem({data})}</div>)}
+            {TimeLine(work_exp)}
         </div>
     );
 }
