@@ -13,12 +13,12 @@ const navbar_button = (
 
 function App() {
     return (
-        <div class="bg-bgclr-0 text-center">
+        <div className="bg-bgclr-0 text-center">
             <BrowserRouter>
-                <nav class="flex p-4 pr-5 justify-end text-2xl text-txtclr-muted font-mono font-semibold">
-                    <div class={navbar_button}><Link to="/">Home</Link></div>
-                    <div class={navbar_button}><Link to="/about">About</Link></div>
-                    <div class={navbar_button}><Link to="/contact">Contact</Link></div>
+                <nav className="flex p-4 pr-5 justify-end text-2xl text-txtclr-muted font-mono font-semibold">
+                    <div className={navbar_button}><Link to="/">Home</Link></div>
+                    <div className={navbar_button}><Link to="/about">About</Link></div>
+                    <div className={navbar_button}><Link to="/contact">Contact</Link></div>
                 </nav>
 
                 <Routes>
