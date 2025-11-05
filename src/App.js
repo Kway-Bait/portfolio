@@ -22,9 +22,9 @@ function App() {
     }, []);
 
     return (
-        <div className="bg-bgclr-0 min-h-full text-center">
+        <div className="bg-bgclr-0 min-h-screen text-center">
             <BrowserRouter>
-                <nav className="flex p-4 pr-5 justify-end text-2xl text-txtclr-muted font-mono font-semibold">
+                <nav className="fixed min-w-full flex p-4 pr-5 justify-end text-2xl bg-transparent text-txtclr-muted font-mono font-semibold z-30">
                     <div className={navbar_button}><Link to="/">Home</Link></div>
                     <div className={navbar_button}><Link to="/about">About</Link></div>
                     <div className={navbar_button}><Link to="/contact">Contact</Link></div>
