@@ -20,7 +20,7 @@ function Skills() {
     ];
 
     return (
-        <div>
+        <div className="relative">
             <h1 className="section-title">My Skills & Tech-stacks</h1>
             <div className="m-3">
                 {content.map(([title, lst]) => (

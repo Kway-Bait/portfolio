@@ -29,7 +29,7 @@ const work_exp = [
 
 function WorkExp() {
     return (
-        <div>
+        <div className="relative">
             <h1 className="section-title">My Work Experience</h1>
             {TimeLine(work_exp)}
         </div>
