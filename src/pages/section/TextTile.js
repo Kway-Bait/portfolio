@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const wrapperClassBase = (
-    "inline-flex z-10 m-1 w-12 h-12 text-black text-center align-middle justify-center rounded-lg border-black border-3 shadow-2xl select-none cursor-pointer"
+    "inline-flex z-10 m-1 w-12 h-12 text-black text-center align-middle justify-center rounded-lg border-black border-3 shadow-2xl select-none cursor-pointer duration-200"
 );
 
 const shadowClass = (

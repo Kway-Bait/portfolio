@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link, Element } from 'react-scroll';
 
-import TextTile from './component/TextTile.js';
-import Skills from './component/Skills.js';
-import FindMe from './component/FindMe.js';
-import WorkExp from './component/WorkExp.js';
+import TextTile from './section/TextTile.js';
+import Skills from './section/Skills.js';
+import FindMe from './section/FindMe.js';
+import WorkExp from './section/WorkExp.js';
+import Education from './section/Education.js';
 
 function Home() {
     const [offsetY, setOffsetY] = useState(0);
@@ -14,6 +15,13 @@ function Home() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    const sections = [
+        ["home", "Home"],
+        ["skill", "Skills"],
+        ["work_exp", "Experience"],
+        ["education", "Edu"],
+    ];
 
     const NameTiles = () => {
         const surname = "YONG";
@@ -26,58 +34,6 @@ function Home() {
         );
     }
 
-    const CustomLink = ({ className, target, caption, hidden }) => (
-        <Link
-            className={`${className} my-auto mx-2 py-1 px-2 cursor-pointer ${hidden ? "invisible" : ""}`}
-            to={target}
-            smooth={true}
-            duration={700}
-            delay={150}
-        >
-            {caption}
-        </Link>
-    );
-
-    const sections = [
-        ["home", "Home"],
-        ["skill_section", "Skills"],
-        ["exp_section", "Experience"],
-    ];
-
-    const LinkTag = ({ sections, show_section, tag_class }) => {
-        const showAll = show_section === undefined;
-        return (
-            <div className="min-w-min">
-                {sections.map(([target, caption]) => {
-                    const isHidden = !showAll && target !== show_section;
-
-                    return (
-                        <Tag disable={showAll || isHidden}>
-                            <CustomLink
-                                className={tag_class}
-                                target={target}
-                                caption={caption}
-                                hidden={isHidden}
-                            />
-                        </Tag>
-                    );
-                })}
-            </div>
-        );
-    }
-
-    const Tag = ({ children, className="", disable }) => {
-        if (disable) {
-            return <span>{children}</span>;
-        } else {
-            return (
-                <span className={className}>
-                    {children}
-                </span>
-            );
-        }
-    }
-
     // TO ADD:
     // 1. My Passion, Work Ethic
     // 2. My Skills
@@ -87,10 +43,26 @@ function Home() {
     // 6. Footer
 
     return (
-        <div className="relative h-screen py-9 text-txtclr text-left">
-            <nav className="fixed flex top-0 p-4 pr-5 h-[5vh] justify-start items-center text-2xl bg-transparent text-txtclr-muted font-mono font-semibold z-20">
-                <LinkTag sections={sections} />
-            </nav>
+        <div className="relative h-full pt-9 text-txtclr text-left">
+            <div className="flex justify-center">
+                <nav
+                    className="fixed flex top-3 p-4 h-[5vh] justify-center items-center text-2xl rounded-3xl backdrop-blur-sm backdrop-brightness-75 hover:backdrop-blur-xl duration-300 text-txtclr-muted font-mono font-semibold z-20"
+                >
+                    <div>
+                        {sections.map(([target, caption]) => (
+                            <Link
+                                className="my-auto mx-2 py-1 px-2 cursor-pointer hover:text-txtclr duration-300"
+                                to={target}
+                                smooth={true}
+                                duration={700}
+                                delay={150}
+                            >
+                                {caption}
+                            </Link>
+                        ))}
+                    </div>
+                </nav>
+            </div>
 
             <Element name="home">
                 <section className="fixed px-[10%] inset-0 h-[105vh] bg-gradient-to-br from-black to-indigo-800">
@@ -117,41 +89,27 @@ function Home() {
                 </section>
             </Element>
 
-            <div className="h-screen" /> {/* Filler div */}
+            <div className="h-screen invisible" /> {/* Filler div */}
 
-            <Element name="skill_section">
-                <section className="relative top-0 min-h-screen z-15 text-txtclr bg-gradient-to-br from-black to-cyan-800">
-                    <div className="sticky w-0 min-w-min flex top-0 p-4 pr-5 h-[5vh] justify-start items-center text-2xl text-txtclr-muted font-mono font-semibold z-0">
-                        <LinkTag 
-                            sections={sections} 
-                            show_section="skill_section" 
-                            tag_class="text-txtclr rounded-2xl" 
-                            Wrapper={Tag({className:"inline bg-gradient-to-tr from-black to-cyan-800"})} 
-                        />
-                    </div>
-                    <div className="relative top-0 z-10">
-                        <div className="p-10 px-[10%]">
-                            <Skills />
-                        </div>
-                    </div>
-                </section>
-            </Element>
+            <div className="relative py-20 px-[10%] m-auto w-[90%] min-h-full rounded-3xl bg-cover bg-gradient-to-br from-lime-200/30 to-cyan-200/30 backdrop-blur-lg backdrop-brightness-50">
+                <Element name="skill">
+                    <section className="relative text-txtclr">
+                        <Skills />
+                    </section>
+                </Element>
 
-            <Element name="exp_section">
-                <section className="relative top-0 min-h-screen z-15 text-txtclr bg-gradient-to-br from-black to-lime-800">
-                    <div className="sticky flex top-0 p-4 pr-5 h-[5vh] justify-start items-center text-2xl bg-transparent text-txtclr-muted font-mono font-semibold z-0">
-                        <LinkTag 
-                            sections={sections} 
-                            show_section="exp_section" 
-                            tag_class="text-txtclr rounded-2xl" 
-                            wrapper={Tag} 
-                        />
-                    </div>
-                    <div className="p-10 px-[10%]">
+                <Element name="work_exp">
+                    <section className="relative text-txtclr">
                         <WorkExp />
-                    </div>
-                </section>
-            </Element>
+                    </section>
+                </Element>
+
+                <Element name="education">
+                    <section className="relative text-txtclr">
+                        <Education />
+                    </section>
+                </Element>
+            </div>
         </div>
     );
 }
