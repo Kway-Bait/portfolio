@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, Element } from 'react-scroll';
 
-import TextTile from './section/TextTile.js';
-import Skills from './section/Skills.js';
-import FindMe from './section/FindMe.js';
-import WorkExp from './section/WorkExp.js';
-import Education from './section/Education.js';
+import TextTile from './utils/TextTile.js';
+import { Skills, FindMe, WorkExp, Education, Achievements, Projects } from './section';
 
 function Home() {
     const [offsetY, setOffsetY] = useState(0);
@@ -19,8 +16,10 @@ function Home() {
     const sections = [
         ["home", "Home"],
         ["skill", "Skills"],
-        ["work_exp", "Experience"],
+        ["workexp", "Experience"],
+        ["project", "Projects"],
         ["education", "Edu"],
+        ["achievement", "Achievements"],
     ];
 
     const NameTiles = () => {
@@ -98,15 +97,28 @@ function Home() {
                     </section>
                 </Element>
 
-                <Element name="work_exp">
+                <Element name="workexp">
                     <section className="relative text-txtclr">
                         <WorkExp />
+                    </section>
+                </Element>
+
+                <Element name="project">
+                    <section className="relative text-txtclr">
+                        <Projects />
                     </section>
                 </Element>
 
                 <Element name="education">
                     <section className="relative text-txtclr">
                         <Education />
+                    </section>
+                </Element>
+
+
+                <Element name="achievement">
+                    <section className="relative text-txtclr">
+                        <Achievements />
                     </section>
                 </Element>
             </div>

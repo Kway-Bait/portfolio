@@ -37,7 +37,7 @@ function Skills() {
     ];
 
     return (
-        <div className="relative py-16">
+        <div className="relative section-container">
             <h1 className="section-title">Skills & Tech-stacks</h1>
             <div className="m-3">
                 {content.map(([title, lst]) => (

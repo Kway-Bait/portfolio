@@ -2,7 +2,7 @@ import Icon from "../utils/Icon.js";
 
 function TimeLineCard({ experience, index, timelineColor }) {
     return (
-        <div className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} my-8`} data-aos="">
+        <div className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} my-8`} data-aos="fade-up">
             <div className="w-1/2 px-4">
                 <div className="bg-bgclr-0 rounded-lg shadow-gray-600 shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                     <div className="flex items-center mb-4">

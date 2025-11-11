@@ -6,6 +6,10 @@
 
 @layer components {
     .section-title {
-        @apply m-4 p-2 text-5xl font-semibold
+        @apply m-2 my-4 p-2 text-5xl font-semibold
+    }
+
+    .section-container {
+        @apply m-4 my-6 p-3
     }
 }

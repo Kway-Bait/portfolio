@@ -45,7 +45,7 @@ function WorkExp() {
     }, []);
 
     return (
-        <div className="m-2 py-16 px-4">
+        <div className="section-container">
             <div className="max-w-7xl mx-auto">
                 <h1 className="section-title text-center">
                     Professional Experience
