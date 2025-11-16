@@ -6,7 +6,7 @@ const edu = [
         subtitle: "(Birmingham, UK)",
         desc: [
             "BSc Computer Science, specializing in software engineering and data systems",
-            "Achieved First-Class Honours in Year 1, excelling in algorithms and software development"
+            "Achieved First-Class Honours in Year 1, excelling in OOP and algorithms"
         ], 
         date: "Sep 2024 - Jun 2027",
     },
