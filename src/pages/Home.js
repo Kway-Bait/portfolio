@@ -48,8 +48,9 @@ function Home() {
                     className="fixed flex top-3 p-4 h-[5vh] justify-center items-center text-2xl rounded-3xl backdrop-blur-sm backdrop-brightness-75 hover:backdrop-blur-xl duration-300 text-txtclr-muted font-mono font-semibold z-20"
                 >
                     <div>
-                        {sections.map(([target, caption]) => (
+                        {sections.map(([target, caption], idx) => (
                             <Link
+                                key={idx}
                                 className="my-auto mx-2 py-1 px-2 cursor-pointer hover:text-txtclr duration-300"
                                 to={target}
                                 smooth={true}

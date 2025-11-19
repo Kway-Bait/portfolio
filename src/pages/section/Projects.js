@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Icon from '../utils/Icon.js';
+import ProjectCard from '../component/ProjectCard.js';
 
 const projects = [
     {
@@ -26,7 +26,7 @@ const projects = [
             card: ""
         },
         github_link: "https://github.com/Kway-Bait/Bookads",
-        image_url: "",
+        image_url: "https://private-user-images.githubusercontent.com/84770455/341701976-38c0790c-3586-41a6-a60d-e190e932c338.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjMyNTIyMDEsIm5iZiI6MTc2MzI1MTkwMSwicGF0aCI6Ii84NDc3MDQ1NS8zNDE3MDE5NzYtMzhjMDc5MGMtMzU4Ni00MWE2LWE2MGQtZTE5MGU5MzJjMzM4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTE2VDAwMTE0MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTMwNjI4YzM5MjRiMDFhZDBhMDE0NDJjOTQ5ODJkNTljMmViNzhkZDVkNGFhNzgzMjdhMjY2OWJlZWViNTc4MDMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.lPGgaNkFnrMjcWrIgdoae5YpocK9uRUmbG2GknbC7Nk",
     },
     {
         title: "TBA",
@@ -38,69 +38,42 @@ const projects = [
             card: "",
         },
         github_link: "",
-        image_url: "",
-    }
+        image_url: null,
+    },
 ]
 
 function Projects() {
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeIndex, setActiveIndex] = useState(0);
 
-    const CarouselCard = ({ key, className, content }) => {
-        return (
-            <div key={key} className={`${className} ${content.style.card}`}>
-                <div className="m-2 h-[25%]">
-                    <img
-                        src={content.image_url}
-                        className="w-full h-full object-cover rounded-2xl"
-                        alt=""
-                    />
-                </div>
+    const len = projects.length;
 
-                <div className="ml-4 m-2">
-                    <h1 className="inline text-txtclr text-3xl font-mono font-bold">{content.title}</h1>
-                    <a 
-                        className="mx-3 p-1 px-3 font-semibold bg-bgclr-3 hover:bg-bgclr-3 rounded-2xl"
-                        href={content.github_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Icon name="nf nf-dev-github"/> Github
-                    </a>
-                    <h2 className="text-txtclr-muted text-lg font-semibold">{content.subtitle}</h2>
-                </div>
+    function handleNext() {
+        setActiveIndex(prev => (prev + 1) % len);
+    }
 
-                <div className="ml-4 m-2 space-y-2">
-                    {content.desc.map((d, i) => (
-                        <div key={i} className="flex items-start">
-                            <p className="text-txtclr">
-                                <Icon name="nf nf-md-send" className="text-transparent bg-clip-text bg-gradient-to-br from-purple-300 to-pink-400" /> {d}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-
-                <div className="ml-4 mt-4 m-2 flex flex-wrap gap-2">
-                    {content.tags.map((tag, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-lime-100 text-lime-700 rounded-full text-sm">
-                            {tag}
-                        </span>
-                    ))}
-                </div>
-            </div>
-        )
+    function handlePrev() {
+        setActiveIndex(prev => (prev + len - 1) % len);
     }
 
     return (
         <div className="section-container">
             <h1 className="section-title">Projects</h1>
-            <div className="flex justify-center h-[50vh] border-2">
-                {projects.map((p, idx) => (
-                    <CarouselCard
-                        key={idx}
-                        className="m-2 p-2 w-[30%] rounded-2xl bg-bgclr-0"
-                        content={p}
-                    />
-                ))}
+            <div className="flex justify-center h-[60vh]">
+                <div
+                    className="size-5 bg-white self-center rounded-full"
+                    onClick={() => handlePrev()}
+                />
+                <div className="p-2 w-[90%] flex justify-center items-center overflow-hidden">
+                    {[...projects, ...projects, ...projects].map((project, i) => {
+                        let offset = len + (activeIndex - i);
+
+                        return ProjectCard({ cardOffset: activeIndex, offset: offset, content: project });
+                    })}
+                </div>
+                <div
+                    className="size-5 bg-white self-center rounded-full"
+                    onClick={() => handleNext()}
+                />
             </div>
         </div>
     )

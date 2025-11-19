@@ -1,7 +1,7 @@
 function Icon ({ name, className }) {
     return (
         <span className={`text-xl ${className}`}>
-            <i class={name} />
+            <i className={name} />
         </span>
     );
 }
