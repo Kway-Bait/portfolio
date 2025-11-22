@@ -8,6 +8,7 @@ function ProjectCard({ cardOffset, offset, content, animationDuration = '150ms' 
 
     const active = (offset === 0) ? true : null;
     const dir = (offset === 0) ? 0 : (offset > 0) ? 1 : -1;
+    const outside = Math.abs(offset) > 1;
 
     if (active) console.log({ px, py });
 
@@ -59,15 +60,17 @@ function ProjectCard({ cardOffset, offset, content, animationDuration = '150ms' 
         el.addEventListener('touchend', handleEndEvent);
 
         return () => {
+            el.removeEventListener('mouseenter', handleEnterEvent)
             el.removeEventListener('mousemove', handleMoveEvent);
             el.removeEventListener('mouseleave', handleEndEvent);
+            el.removeEventListener('touchenter', handleEnterEvent)
             el.removeEventListener('touchmove', handleMoveEvent);
             el.removeEventListener('touchend', handleEndEvent);
         };
     }, [animationDuration]);
 
     const innerClass = (active) ? "" : "";
-    const wrapperClass = (active) ? "opacity-100" : "opacity-70";
+    const wrapperClass = (active) ? "opacity-100" : `${(outside)? "opacity-0" : "opacity-70"} blur-[2px] brightness-75`;
 
     const containerTransform = `perspective(1000px) translateX(${-100 * cardOffset + 100}%)`;
     const wrapperTransform = `perspective(1000px) rotateY(${35 * dir}deg)`;

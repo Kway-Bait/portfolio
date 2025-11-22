@@ -1,32 +1,17 @@
 import Icon from "../utils/Icon.js";
-
-const edu = [
-    {
-        title: "University of Birmingham",
-        subtitle: "(Birmingham, UK)",
-        desc: [
-            "BSc Computer Science, specializing in software engineering and data systems",
-            "Achieved First-Class Honours in Year 1, excelling in OOP and algorithms"
-        ], 
-        date: "Sep 2024 - Jun 2027",
-    },
-    {
-        title: "Hin Hua High School",
-        subtitle: "(Klang, Malaysia)",
-        desc: [
-            "Graduated among top 3 students in the cohort"
-        ],
-        date: "Jan 2018 - Dec 2023",
-    },
-]
+import { data } from "../data/EducationData.js";
 
 function Education() {
     return (
         <div className="relative section-container">
             <h1 className="section-title">Education</h1>
             <ul className="m-2">
-                {edu.map((content, id) => (
-                    <li key={id} className="flex m-2 p-4 rounded-xl backdrop-blur-xl backdrop-brightness-75">
+                {data.map((content, id) => (
+                    <li
+                        key={id}
+                        className="flex m-2 p-4 rounded-xl backdrop-blur-xl backdrop-brightness-75"
+                        data-aos="fade-left"
+                    >
                         <Icon name="m-3 nf nf-md-school text-2xl text-blue-400" />
                         <div>
                             <h1 className="inline text-2xl font-bold">{content.title}</h1>

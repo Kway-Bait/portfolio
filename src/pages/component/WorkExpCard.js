@@ -1,6 +1,6 @@
 import Icon from "../utils/Icon.js";
 
-function TimeLineCard({ experience, index, timelineColor }) {
+function WorkExpCard({ experience, index, cardColor }) {
     return (
         <div className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} my-8`} data-aos="fade-up">
             <div className="w-1/2 px-4">
@@ -9,7 +9,7 @@ function TimeLineCard({ experience, index, timelineColor }) {
                         <img
                             src={experience.logo}
                             alt={experience.company}
-                            className="w-12 h-12 rounded-full object-cover"
+                            className="size-16 rounded-full object-cover"
                             loading="lazy"
                         />
 
@@ -51,7 +51,7 @@ function TimeLineCard({ experience, index, timelineColor }) {
             <div className="w-10 flex justify-center">
                 <div
                     className="w-5 h-5 rounded-full border-4 border-white shadow transition-colors duration-1000 ease-in-out"
-                    style={{ backgroundColor: timelineColor }}
+                    style={{ backgroundColor: cardColor }}
                 />
             </div>
             
@@ -60,4 +60,4 @@ function TimeLineCard({ experience, index, timelineColor }) {
     );
 };
 
-export default TimeLineCard;
+export default WorkExpCard;

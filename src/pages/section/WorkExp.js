@@ -1,34 +1,7 @@
 import { useState, useEffect } from 'react';
-import TimeLineCard from "../component/TimeLineCard.js";
-import acceler_logo from "../../assets/ACCELER_LOGO.png";
+import WorkExpCard from '../component/WorkExpCard.js';
 
-const experiences = [
-    {
-        id: 1,
-        company: "AccelerTechnology (Remote Startup)",
-        logo: acceler_logo,
-        position: "AI & Full Stack Web Developer",
-        duration: "Jan 2025 - Present",
-        achievements: [
-            "Led development of fast-paced startup",
-            "Improve model accuracy to 85%",
-            "Implemented CI/CD pipeline",
-        ],
-        skills: ["Node.js", "React", "Vercel", "Azure", "Docker"]
-    },
-    {
-        id: 2,
-        company: "Autocount Sdn. Bhd.",
-        logo: "https://payrecon.my/wp-content/uploads/2021/08/autocount_logo_2.png",
-        position: "Web Developer Internship",
-        duration: "Mar 2024 - July 2024",
-        achievements: [
-            "Implemented 15+ features",
-            "Developed enterprise-level applications",
-        ],
-        skills: ["ASP.NET", "React", "MySQL"]
-    }
-]
+import { data } from '../data/WorkExpData.js';
 
 function WorkExp() {
     const [color, setColor] = useState("rgb(239, 68, 68)");
@@ -60,12 +33,12 @@ function WorkExp() {
                     <div className="h-1" />
 
                     {/* Experience Card */}
-                    {experiences.map((experience, index) => (
-                        <TimeLineCard
+                    {data.map((experience, index) => (
+                        <WorkExpCard
                             key={experience.id}
                             experience={experience}
                             index={index}
-                            timelineColor={color}
+                            cardColor={color}
                         />
                     ))}
 
