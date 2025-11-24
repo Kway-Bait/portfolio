@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, Element } from 'react-scroll';
 
 import TextTile from './utils/TextTile.js';
-import { About, Skills, FindMe, WorkExp, Projects, Education } from './section';
+import { About, Skills, FindMe, WorkExp, Projects, Education, Footer} from './section';
 
 function Home() {
     const [offsetY, setOffsetY] = useState(0);
@@ -64,7 +64,7 @@ function Home() {
     // 6. Footer
 
     return (
-        <div className="relative h-full pt-9 text-txtclr text-left">
+        <div className="relative h-full pt-9 text-txtclr text-left bg-scroll bg-gradient-to-br from-black to-indigo-800">
             <div className="flex justify-center">
                 <nav
                     className="fixed flex top-3 p-4 h-[5vh] justify-center items-center text-2xl rounded-3xl backdrop-blur-sm backdrop-brightness-75 hover:backdrop-blur-xl duration-300 text-txtclr-muted font-mono font-semibold z-20"
@@ -88,8 +88,8 @@ function Home() {
             </div>
 
             <Element name="home">
-                <section className="fixed px-[10%] inset-0 h-[105vh] bg-gradient-to-br from-black to-indigo-800">
-                    <div className="fixed top-[5vh] w-full h-full overflow-hidden">
+                <section className="absolute px-[10%] inset-0 h-full">
+                    <div className="fixed top-[4vh] w-full h-screen overflow-hidden">
                         <div
                             className="relative inset-x-5 inset-y-1/4"
                             style={{
@@ -114,7 +114,7 @@ function Home() {
 
             <div className="h-screen invisible" /> {/* Filler div */}
 
-            <div className="relative py-20 px-[10%] m-auto mb-10 w-[90%] min-h-full rounded-3xl bg-cover bg-gradient-to-br from-lime-200/30 to-cyan-200/30 backdrop-blur-lg backdrop-brightness-50">
+            <div className="relative py-20 px-[10%] mx-auto w-[90%] min-h-full rounded-3xl bg-cover bg-gradient-to-br from-lime-200/30 to-cyan-200/30 backdrop-blur-lg backdrop-brightness-50">
                 {sections.slice(1).map((section, index) => (
                     <Element key={index} name={section.link}>
                         <section className="relative text-txtclr">
@@ -123,6 +123,10 @@ function Home() {
                     </Element>
                 ))}
             </div>
+
+            <footer className="mt-24 py-10 px-6 w-full text-center text-txtclr-muted bg-black/30 backdrop-blur-xl backdrop-brightness-50 border-t border-white/10">
+                <Footer />
+            </footer>
         </div>
     );
 }

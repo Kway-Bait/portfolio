@@ -1,24 +1,19 @@
-import Icon from '../utils/Icon.js';
+import { contacts } from '../data/Contact.js';
 
 function FindMe() {
-    const links = [
-        ["LinkedIn", "https://linkedin.com/in/kwyong05", <Icon name="nf nf-dev-linkedin" className="text-blue-300" />],
-        ["Github", "https://github.com/Kway-Bait", <Icon name="nf nf-dev-github" />],
-    ];
-
     return (
         <div className="m-1 my-4 p-3 rounded-lg min-w-max w-3 bg-transparent">
-            <h2 className="inline text-lg font-semibold">Find me at: </h2>
+            <h2 className="inline text-xl font-semibold">Find me at: </h2>
             <div className="inline-flex flex-wrap justify-start">
-                {links.map(([name, link, icon], idx) => (
+                {contacts.map((contact, idx) => (
                     <a
                         key={idx}
-                        className="mx-1 p-1 px-3 text-center align-top bg-bgclr-2 hover:bg-bgclr-3 rounded-2xl"
-                        href={link}
+                        className="mx-1 p-1 px-3 text-lg text-center align-top bg-bgclr-2 hover:bg-bgclr-3 rounded-2xl"
+                        href={contact.link}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        {icon} {name}
+                        {contact.platform_icon} {contact.platform}
                     </a>
                 ))}
             </div>

@@ -25,3 +25,8 @@
         @apply m-4 my-6 p-3
     }
 }
+
+body::-webkit-scrollbar {
+    display:none;
+}
+
