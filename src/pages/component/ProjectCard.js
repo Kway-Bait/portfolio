@@ -10,8 +10,6 @@ function ProjectCard({ cardOffset, offset, content, animationDuration = '150ms' 
     const dir = (offset === 0) ? 0 : (offset > 0) ? 1 : -1;
     const outside = Math.abs(offset) > 1;
 
-    if (active) console.log({ px, py });
-
     useEffect(() => {
         if (!ref.current) return;
         const unify = (e) => (e.changedTouches ? e.changedTouches[0] : e);

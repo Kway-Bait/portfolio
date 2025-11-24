@@ -4,6 +4,11 @@ import { Link, Element } from 'react-scroll';
 import TextTile from './utils/TextTile.js';
 import { About, Skills, FindMe, WorkExp, Projects, Education, Footer} from './section';
 
+// TODO: Make Responsive
+// TODO: Populate Data
+// TODO: Add Image
+// TODO: Add Easter Eggs
+
 function Home() {
     const [offsetY, setOffsetY] = useState(0);
 
