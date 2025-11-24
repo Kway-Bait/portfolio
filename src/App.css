@@ -1,8 +1,20 @@
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
+@import "https://fonts.googleapis.com/css2?family=Fascinate&display=swap";
+@import "https://fonts.googleapis.com/css2?family=VT323&display=swap";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .fascinate-regular {
+        font-family: "Fascinate", system-ui;
+    }
+
+    .vt323-regular {
+        font-family: "VT323", monospace;
+    }
+}
 
 @layer components {
     .section-title {
