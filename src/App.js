@@ -14,7 +14,7 @@ function App() {
     }, []);
 
     return (
-        <div className="bg-bgclr-0 min-h-screen text-center">
+        <div className="w-full min-h-screen text-center">
             <Home />
         </div>
     );

@@ -44,7 +44,10 @@ function WorkExp() {
 
                     <div className="h-1" />
                     <div className="flex justify-center">
-                        <div className="w-8 h-8 rounded-full transition-colors duration-1000 easn-in-out" style={{ backgroundColor: color }} />
+                        <div 
+                            className="w-8 h-8 rounded-full transition-colors duration-1000 easn-in-out" 
+                            style={{ backgroundColor: color }} 
+                        />
                     </div>
                 </div>
             </div>

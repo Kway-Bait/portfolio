@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 const wrapperClassBase = (
-    "inline-flex z-10 m-1 w-12 h-12 text-black text-center align-middle justify-center rounded-lg border-black border-3 shadow-2xl select-none cursor-pointer duration-200"
+    "inline-flex z-10 m-[0.12rem] md:m-1 size-6 md:size-12 text-black text-center items-center align-middle justify-center rounded-lg border-black border-3 shadow-2xl select-none cursor-pointer duration-200"
 );
 
 const shadowClass = (
-    "absolute w-12 h-12 bg-gray-600 rounded-lg translate-y-2 shadow-lg"
+    "absolute size-6 md:size-12 bg-gray-600 rounded-lg translate-y-1 md:translate-y-2 shadow-lg"
 );
 
 const colors = [
@@ -25,7 +25,7 @@ function TextTile(text) {
     const wrapperClass = `
         ${wrapperClassBase} 
         ${colors[tileColor]}
-        ${isClicked ? 'transform translate-y-1' : ''}
+        ${isClicked ? 'transform translate-y-[0.12rem] md:translate-y-1' : ''}
     `;
 
     const handleTileClicked = () => {

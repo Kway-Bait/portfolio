@@ -7,11 +7,11 @@ function Skills() {
             <h1 className="section-title">Skills & Tech-stacks</h1>
             <div className="m-3">
                 {data.map(([title, lst], idx) => (
-                    <div key={idx} className="p-1">
-                        <h2 className="ml-4 inline text-xl font-semibold text-cyan-400">{title} </h2>
+                    <div key={idx} className="m-1 p-1 border-2 border-cyan-200 border-opacity-20 hover:shadow-lg hover:shadow-cyan-500/30 duration-300 hover:border-opacity-50 rounded-2xl">
+                        <h2 className="ml-4 inline text-md md:text-xl font-semibold text-cyan-400">{title} </h2>
                         <ul className="inline-flex flex-wrap justify-start">
                             {lst.map(([name, icon, className], id) => (
-                                <li key={id} className="mx-1 px-1 text-lg">
+                                <li key={id} className="mx-1 px-1 text-sm md:text-lg">
                                     {<Icon className={className} name={icon} />} {name}
                                 </li>
                             ))}

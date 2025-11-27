@@ -12,15 +12,15 @@ function Education() {
                         className="flex m-2 p-4 rounded-xl backdrop-blur-xl backdrop-brightness-75"
                         data-aos="fade-left"
                     >
-                        <Icon name="m-3 nf nf-md-school text-2xl text-blue-400" />
+                        <Icon name="m-3 nf nf-md-school text-blue-400" className="text-md md:text-2xl"/>
                         <div>
-                            <h1 className="inline text-2xl font-bold">{content.title}</h1>
-                            <h2 className="mx-2 inline text-xl text-txtclr-muted">{content.subtitle}</h2>
-                            <strong className="font-semibold">{content.date}</strong>
+                            <h1 className="inline text-lg md:text-2xl font-bold">{content.title}</h1>
+                            <h2 className="mx-2 md:inline text-base md:text-xl text-txtclr-muted">{content.subtitle}</h2>
+                            <strong className="text-sm md:text-base font-semibold">{content.date}</strong>
                             <ul>
                                 {content.desc.map((txt, idx) => (
-                                    <li key={idx} className="text-gray-200">
-                                        <Icon name="m-1 text-lg text-lime-300 nf nf-fa-circle_chevron_right" /> {txt}
+                                    <li key={idx} className="text-gray-200 text-sm md:text-base">
+                                        <Icon name="m-1 text-lime-300 nf nf-fa-circle_chevron_right" /> {txt}
                                     </li>
                                 ))}
                             </ul>

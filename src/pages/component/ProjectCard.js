@@ -76,7 +76,7 @@ function ProjectCard({ cardOffset, offset, content, animationDuration = '150ms' 
 
     return (
         <section
-            className="h-[90%] w-1/3 flex-none transition-all duration-1000 ease-in-out" 
+            className={`h-[90%] min-w-[15rem] w-1/3 flex-none transition-all duration-1000 ease-in-out`}
             style={{ 'transform': containerTransform }}
         >
             <div
@@ -99,32 +99,32 @@ function ProjectCard({ cardOffset, offset, content, animationDuration = '150ms' 
                         />
                     </div>
 
-                    <div className="ml-4 m-2">
-                        <h1 className="inline text-txtclr text-3xl font-mono font-bold">{content.title}</h1>
+                    <div className="mx-4 m-2">
+                        <h1 className="inline text-txtclr text-xl md:text-3xl font-mono font-bold">{content.title}</h1>
                         <a
-                            className="mx-3 p-1 px-3 font-semibold bg-bgclr-3 hover:bg-bgclr-3 rounded-2xl"
+                            className="m-2 p-1 rounded-full bg-bgclr-1"
                             href={content.github_link}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <Icon name="nf nf-dev-github" /> Github
+                            <Icon name="nf nf-dev-github" />
                         </a>
-                        <h2 className="text-txtclr-muted text-lg font-semibold">{content.subtitle}</h2>
+                        <h2 className="text-txtclr-muted text-sm md:text-lg font-semibold">{content.subtitle}</h2>
                     </div>
 
                     <div className="ml-4 m-2 space-y-2">
                         {content.desc.map((d, i) => (
                             <div key={i} className="flex items-start">
-                                <p className="text-txtclr">
+                                <p className="text-sm md:text-base text-txtclr">
                                     <Icon name="nf nf-md-send" className="text-transparent bg-clip-text bg-gradient-to-br from-purple-300 to-pink-400" /> {d}
                                 </p>
                             </div>
                         ))}
                     </div>
 
-                    <div className="ml-4 mt-4 m-2 flex flex-wrap gap-2">
+                    <div className="mx-4 mt-4 flex flex-wrap gap-2">
                         {content.tags.map((tag, idx) => (
-                            <span key={idx} className="px-3 py-1 bg-lime-100 text-lime-700 rounded-full text-sm">
+                            <span key={idx} className="px-2 md:px-3 py-[0.12rem] md:py-1 bg-lime-100 text-lime-700 rounded-full text-xs md:text-sm">
                                 {tag}
                             </span>
                         ))}
