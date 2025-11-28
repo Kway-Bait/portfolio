@@ -24,6 +24,7 @@ export const data = [
         achievements: [
             "Implemented 15+ features",
             "Developed enterprise-level applications",
+            "Developed functionalities and resolved bugs across both backend and frontend",
         ],
         skills: ["ASP.NET", "React", "MySQL"]
     }

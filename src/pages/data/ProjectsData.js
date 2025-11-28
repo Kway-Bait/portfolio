@@ -6,7 +6,9 @@ export const data = [
         title: "MathMaze",
         subtitle: "A Zork-style game with a math twist!",
         desc: [
-            "Text-based game",
+            "Developed using Java for Object-Oriented Programming course",
+            "Replayable with randomized elements for unique gameplay each time",
+            "Simple command-line interface with no advanced setup required"
         ],
         tags: ["Java", "OOP"],
         style: {
@@ -14,20 +16,25 @@ export const data = [
         },
         github_link: "https://github.com/Kway-Bait/MathMaze",
         image_url: mathmaze,
-    },
+    }
+    ,
     {
         title: "Bookads",
-        subtitle: "A Book Trading Website",
+        subtitle: "A Book Trading Platform for the Convenience of the School Community",
         desc: [
-            "Full stack development",
+            "Full stack development using ASP.NET Core & React",
+            "Secure user authentication with ASP.NET Identity",
+            "Database management with SQL Server",
+            "Responsive frontend and seamless user experience"
         ],
-        tags: ["ASP.NET", "MySQL", "React"],
+        tags: ["ASP.NET", "React", "SQL Server", "Authentication"],
         style: {
             card: ""
         },
         github_link: "https://github.com/Kway-Bait/Bookads",
         image_url: bookads,
-    },
+    }
+    ,
     {
         title: "TBA",
         desc: [

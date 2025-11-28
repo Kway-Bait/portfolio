@@ -18,7 +18,7 @@ function Projects() {
     return (
         <div className="section-container">
             <h1 className="section-title mb-0">Projects</h1>
-            <div className="flex justify-center h-[60vh] max-h-[30rem] gap-2">
+            <div className="flex justify-center h-[65vh] gap-2">
                 <div
                     className="text-2xl md:size-5 self-center rounded-full nf nf-fa-circle_chevron_left cursor-pointer"
                     onClick={() => handlePrev()}

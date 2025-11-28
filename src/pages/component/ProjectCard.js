@@ -76,7 +76,7 @@ function ProjectCard({ cardOffset, offset, content, animationDuration = '150ms' 
 
     return (
         <section
-            className={`h-[90%] min-w-[15rem] w-1/3 flex-none transition-all duration-1000 ease-in-out`}
+            className="h-[90%] min-w-[15rem] w-1/2 flex-none transition-all duration-1000 ease-in-out"
             style={{ 'transform': containerTransform }}
         >
             <div
@@ -112,7 +112,7 @@ function ProjectCard({ cardOffset, offset, content, animationDuration = '150ms' 
                         <h2 className="text-txtclr-muted text-sm md:text-lg font-semibold">{content.subtitle}</h2>
                     </div>
 
-                    <div className="ml-4 m-2 space-y-2">
+                    <div className="ml-4 m-2 md:space-y-2">
                         {content.desc.map((d, i) => (
                             <div key={i} className="flex items-start">
                                 <p className="text-sm md:text-base text-txtclr">
@@ -122,7 +122,7 @@ function ProjectCard({ cardOffset, offset, content, animationDuration = '150ms' 
                         ))}
                     </div>
 
-                    <div className="mx-4 mt-4 flex flex-wrap gap-2">
+                    <div className="mx-4 md:mt-4 flex flex-wrap gap-2">
                         {content.tags.map((tag, idx) => (
                             <span key={idx} className="px-2 md:px-3 py-[0.12rem] md:py-1 bg-lime-100 text-lime-700 rounded-full text-xs md:text-sm">
                                 {tag}
