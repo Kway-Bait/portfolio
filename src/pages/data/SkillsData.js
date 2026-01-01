@@ -8,6 +8,7 @@ export const data = [
         ["JavaScript", "nf nf-dev-javascript", "text-yellow-300"],
         ["TypeScript", "nf nf-dev-typescript", "text-blue-300"],
         ["Bash", "nf nf-dev-bash"],
+        ["Haskell", "nf nf-dev-haskell", "text-purple-400"],
     ]],
     ["Frameworks:", [
         ["ASP.NET", "nf nf-md-dot_net", "text-purple-400"],

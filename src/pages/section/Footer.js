@@ -1,4 +1,5 @@
 import { contacts } from '../data/Contact.js';
+import Link from "../utils/Link.js";
 
 function Footer() {
     return (
@@ -6,15 +7,14 @@ function Footer() {
 
             <div className="flex space-x-6 text-lg">
                 {contacts.map((contact, index) => (
-                    <a
+                    <Link
                         key={index}
                         className="hover:brightness-150 hover:scale-110 transition-all duration-300"
                         href={contact.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        newTab={true}
                     >
                         {contact.platform_icon}
-                    </a>
+                    </Link>
                 ))}
             </div>
 

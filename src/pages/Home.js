@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, Element } from 'react-scroll';
 
 import TextTile from './utils/TextTile.js';
-import { About, Skills, FindMe, WorkExp, Projects, Education, Footer } from './section';
+import { About, Skills, FindMe, WorkExp, Projects, Education, Achievement, Footer } from './section';
 
 // TODO: Make Responsive [Done]
 // TODO: Populate Data [Done]
@@ -48,6 +48,11 @@ function Home() {
             title: "Education",
             content: <Education />
         },
+        {
+            link: "achievement",
+            title: "Achievement",
+            content: <Achievement />
+        }
     ];
 
     const NameTiles = () => {
